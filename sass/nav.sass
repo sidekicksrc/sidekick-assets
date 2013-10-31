@@ -1,0 +1,67 @@
+nav
+  /* presentation */
+  text-transform: uppercase
+  .links, .users
+    padding-top: 2rem
+    font-size: 0.8rem
+    font-weight: 800
+  .users a
+    margin-left: 1rem
+  .signup
+    position: relative
+    top: -0.5rem
+  .links a
+    display: inline-block
+    text-decoration: none
+    &::after
+      display: inline-block
+      content: "|"
+      color: #ddd
+      margin: 0 1rem
+      @media (min-width: 500px)
+        margin: 0 0.5rem
+    &:last-child::after
+      content: ""
+  .btn
+    +action_button()
+    background: $contrast
+  /* layout */
+  +row()
+  .logo
+    +span-columns(4)
+    +media($medium)
+      +span-columns(4)
+  .links
+    +span-columns(6)
+    +media($medium)
+      +span-columns(2)
+    +media($small)
+      +span-columns(4)
+  .users
+    +span-columns(2)
+    +media($medium)
+      a
+        float: left
+      +span-columns(2)
+    +media($small)
+      +span-columns(4)
+  .users a
+    float: right
+    +media($small)
+      float: none
+.logo
+  position: relative
+  padding-left: 80px
+  img
+    position: absolute
+    top: 0
+    left: 0
+  a
+    text-transform: uppercase
+    text-decoration: none
+    color: #bbb
+    .lang
+      color: #888
+  .lang
+    font-weight: 800
+    
