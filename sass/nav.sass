@@ -1,15 +1,17 @@
 nav
+  height: 5rem
   /* presentation */
   text-transform: uppercase
   .links, .users
     padding-top: 2rem
     font-size: 0.8rem
     font-weight: 800
-  .users a
-    margin-left: 1rem
-  .signup
+  .signup.btn
+    padding: .5rem 1rem
     position: relative
     top: -0.5rem
+  .links
+    text-align: center
   .links a
     display: inline-block
     text-decoration: none
@@ -28,11 +30,11 @@ nav
   /* layout */
   +row()
   .logo
-    +span-columns(4)
+    +span-columns(2)
     +media($medium)
       +span-columns(4)
   .links
-    +span-columns(6)
+    +span-columns(8)
     +media($medium)
       +span-columns(2)
     +media($small)
@@ -45,16 +47,19 @@ nav
       +span-columns(2)
     +media($small)
       +span-columns(4)
-  .users a
-    float: right
-    +media($small)
-      float: none
+    a
+      margin-left: 1rem
+      float: right
+      +media($small)
+        float: none
 .logo
   position: relative
-  padding-left: 80px
+  padding-left: 95px
+  h2
+    margin-top: 1.5rem
   img
     position: absolute
-    top: 0
+    top: -10px
     left: 0
   a
     text-transform: uppercase
